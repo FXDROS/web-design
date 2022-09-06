@@ -1,0 +1,29 @@
+.detail-title {
+  font-size: 5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.detail-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 770px) {
+  .addSchedule {
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .detail-title {
+    font-size: 3.25rem;
+  }
+}

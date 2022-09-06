@@ -1,0 +1,61 @@
+.search-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#book-keyword {
+  margin: 12rem 0 8rem 0;
+  width: 75%;
+  height: 2.25rem;
+  padding: 0.5rem;
+  font-size: 1.75rem;
+}
+
+#search-result {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.books {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 150px;
+  margin: 2rem 1rem 2rem 1rem;
+  height: auto;
+}
+
+.book-list {
+  width: 80%;
+  margin-bottom: 11.5rem;
+  display: flex;
+  justify-content: center;
+}
+footer {
+  margin-top: 15rem !important;
+}
+
+td,
+th {
+  padding: 1rem;
+  text-align: left;
+  max-width: 18rem;
+}
+
+@media (max-width: 770px) {
+  .book-list {
+    margin-bottom: 8rem;
+  }
+
+  #book-keyword {
+    margin: 8rem 0 4rem 0;
+    width: 75%;
+    height: 1.75rem;
+    padding: 0.25rem;
+    font-size: 1rem;
+  }
+}

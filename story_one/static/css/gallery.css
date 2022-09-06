@@ -1,0 +1,36 @@
+.galleryContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 10% 5% 10% 5%;
+}
+.photos {
+  width: 30%;
+}
+.image {
+  padding: 1.5%;
+}
+
+@media (max-width: 770px) {
+  .galleryContainer {
+    margin: 10% 1.5% 10% 1.5%;
+  }
+
+  .photos {
+    width: 32.5%;
+  }
+}
+
+@media (max-width: 550px) {
+  .main {
+    padding: 10rem 0 0 0 !important;
+  }
+
+  .photos {
+    width: 100%;
+  }
+
+  .galleryContainer {
+    flex-direction: column;
+  }
+}

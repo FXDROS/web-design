@@ -1,0 +1,230 @@
+{% extends 'base.html' %} {% load static %} {% block meta %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}" />
+<script
+  src="http://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+  crossorigin="anonymous"></script>
+{%endblock %} {%block title %} dionisiusamudra | profile {% endblock %}
+<!-- -->
+{% block content %}
+<div class="page-title">
+  <div class="text">Profile</div>
+  <div class="mini-text">プロファイル</div>
+</div>
+<div class="profile-header">
+  <div class="profile-pict"></div>
+  <div class="profile-name">
+    <div class="name">Dionisius Baskoro Samudra</div>
+    <div class="batch">
+      <p>Computer Science 2019<br />1906350774</p>
+    </div>
+  </div>
+</div>
+<div class="desc">
+  <p>
+    Hi, my name is Dionisius Baskoro Samudra; you can call me Dion. I am just a
+    normal college student who is trying his best to stay alive and enjoy his
+    life. I used to play uni-hockey back in junior highschool. Not only that,
+    but I also love to play music. I mainly play piano and bass, but sometimes I
+    play guitar as well. People say that CS students are nerds. But I don’t
+    think so~ Lot’s of CS students love to play video games; including me.
+    Assassin’s Creed and Call of Duty are two of my most favorite franchises.
+    Well, I make this profile to fulfill my assignment. But, if you want to know
+    me even further, go ahead.
+  </p>
+</div>
+<div class="card-container">
+  <div class="card-edu">
+    <div class="card">
+      <div class="card-title">Education</div>
+      <div style="margin-top: 1.5rem">
+        <div class="year">2019 - Now</div>
+        <div class="activities">
+          <div class="act-cont">
+            <div class="act-title">University of Indonesia</div>
+            <div class="act-desc">Computer Science Major</div>
+          </div>
+        </div>
+        <div class="year">2016 - 2019</div>
+        <div class="activities">
+          <div class="act-cont">
+            <div class="act-title">SMAN 2 Tangerang Selatan</div>
+            <div class="act-desc">Computer Science Major</div>
+          </div>
+          <div class="act-cont">
+            <div class="act-title">Purwadhika Coding and Startup School</div>
+            <div class="act-desc">Computer Science Major</div>
+          </div>
+          <div class="act-cont">
+            <div class="act-title">Elokuensi English Course</div>
+            <div class="act-desc">Computer Science Major</div>
+          </div>
+        </div>
+        <div class="year">2013 - 2016</div>
+        <div class="activities">
+          <div class="act-cont">
+            <div class="act-title">Santa Ursula BSD</div>
+            <div class="act-desc">Computer Science Major</div>
+          </div>
+        </div>
+        <div class="year">2007 - 2013</div>
+        <div class="activities">
+          <div class="act-cont">
+            <div class="act-title">Santa Ursula BSD</div>
+            <div class="act-desc">Computer Science Major</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-event">
+    <div class="card">
+      <div class="card-title">Event and Organization</div>
+      <div style="margin-top: 1.5rem">
+        <div class="year">2019 - Now</div>
+        <div class="activities">
+          <div class="act-cont">
+            <div class="act-title">Junior Member Web Development SIG</div>
+            <div class="act-desc">RISTEK Fasilkom UI</div>
+          </div>
+          <div class="act-cont">
+            <div class="act-title">Deputy Head of Public Relation</div>
+            <div class="act-desc">DPM Fasilkom UI 2020</div>
+          </div>
+          <div class="act-cont">
+            <div class="act-title">Staff Of Logistic</div>
+            <div class="act-desc">BETIS Fasilkom UI 2020</div>
+          </div>
+        </div>
+        <div class="year">2016 - 2019</div>
+        <div class="activities">
+          <div class="act-cont">
+            <div class="act-title">Student Exchange Programme</div>
+            <div class="act-desc">Haruhigaoka High School, Japan</div>
+          </div>
+          <div class="act-cont">
+            <div class="act-title">Student Immersion Progtamme</div>
+            <div class="act-desc">St. Paul's High School, Australia</div>
+          </div>
+        </div>
+        <div class="year">2013 - 2016</div>
+        <div class="activities">
+          <div class="act-cont">
+            <div class="act-title">Head Of Social Division</div>
+            <div class="act-desc">SMP Santa Ursula Student Council</div>
+          </div>
+          <div class="act-cont">
+            <div class="act-title">International Ursuline Youth Day</div>
+            <div class="act-desc">Regina Pacis, Surakarta</div>
+          </div>
+          <div class="act-cont">
+            <div class="act-title">Vice President</div>
+            <div class="act-desc">SMP Santa Ursula Student Council</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="FAQ">
+  <div class="card-faq">
+    <div class="card-title faq-padding">
+      FAQ
+    </div>
+    <div  class="wrapper">
+    <div class="accordion_wrap">
+      <div style="display: flex; justify-content: space-between;">
+        <div class="accordion_header faq-padding" id="accordion1">
+          <div class="act-title">
+            How to be accepted in University of Indonesia?
+          </div>
+        </div>  
+        <div class="up-down-button faq-padding">
+          <a class='up' id="up1">
+            <img class="image-up" src="{% static 'images/up.png' %}" alt="up"/>
+          </a>
+          <a class='down' id="down1">
+            <img class="image-down" src="{% static 'images/up.png' %}" alt="up"/>
+          </a>
+        </div>
+      </div>
+      <div class="accordion_body act-desc acc-padding">
+        Well, it deppends on which faculty that you want to go to, your learning strategy,
+        and last but not least, your motivation. It is important to keep your motivation
+        in order to achieve your goals. If you don't keep yourself motivated, you'll
+        lose your way eventualy.
+      </div>
+    </div>
+    <div class="accordion_wrap">
+      <div style="display: flex; justify-content: space-between;">
+        <div class="accordion_header faq-padding" id="accordion2">
+          <div class="act-title">
+            What it feels like to participate in students exchange?
+          </div>
+        </div>
+        <div class="up-down-button faq-padding">
+          <a class='up' id="up2">
+            <img class="image-up" src="{% static 'images/up.png' %}" alt="up"/>
+          </a>
+          <a class='down' id="down2">
+            <img class="image-down" src="{% static 'images/up.png' %}" alt="down"/>
+          </a>
+        </div>
+      </div>
+      <div class="accordion_body act-desc acc-padding">
+        It felt amazing to know lots of people from other countries, especially when you
+        learn about their cultures while staying in their house for several days. When I visited
+        Australia, it was pretty fine. But it was a tougher challenge for me when I visited Japan
+        since I have to improve my Japanese, even though it is my third language.
+      </div>
+    </div>
+    <div class="accordion_wrap">
+      <div style="display: flex; justify-content: space-between;">
+      <div class="accordion_header faq-padding" id="accordion3">
+        <div class="act-title">
+          Is it hard to learn computer sience?
+        </div>
+      </div>
+        <div class="up-down-button faq-padding">
+          <a class='up' id="up3">
+            <img class="image-up" src="{% static 'images/up.png' %}" alt="up"/>
+          </a> <a class='down' id="down3">
+            <img class="image-down" src="{% static 'images/up.png' %}" alt="down"/>
+          </a>
+        </div>
+      </div>
+      <div class="accordion_body act-desc acc-padding">
+        Computer science is a wide field. There are so many things you can learn here, such as
+        web development, game development, cyber security, etc. Some are complicated, some are
+        difficult, some demmands creativity. But hey, as long as you love it, it won't be a burden tho.
+      </div>
+    </div>
+    <div class="accordion_wrap">
+      <div style="display: flex; justify-content: space-between;">
+      <div class="accordion_header faq-padding" id="accordion4">
+        <div class="act-title">
+          Are you planning to study abroad?
+        </div>
+      </div>
+        <div class="faq-padding up-down-button">
+          <a class='up' id="up4">
+            <img class="image-up" src="{% static 'images/up.png' %}" alt="up"/>
+          </a>
+          <a class='down' id="down4">
+            <img class="image-down" src="{% static 'images/up.png' %}" alt="down"/>
+          </a>
+        </div>
+      </div>
+      <div class="accordion_body act-desc acc-padding">
+        Ya! I am preparing myself to continue my education later on either in America, Australia,
+        or Japan. For the major, I'm not quite sure for now, but I guess it is either another
+        computer science stuffs or management.
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}
+{% block script %}
+<script src="{% static 'js/accordion.js' %}"></script>
+{% endblock %}

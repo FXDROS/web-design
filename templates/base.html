@@ -1,0 +1,140 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    {% block meta %}{% endblock %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="{% static 'js/navbar.js' %}"></script>
+    <title>{% block title %}dionisiusamudra{% endblock %}</title>
+  </head>
+  <body>
+    <div id="pop-nav" class="pop-nav">
+      <div class="close-button">
+        <img
+          class="close"
+          onclick="closeNav()"
+          src="{% static 'images/160171083747624487.png'%}"
+          width="30px"
+          height="30px"
+        />
+      </div>
+      <div class="pop-menu-container">
+        <a
+          href="{% url 'story_one:profile' %}"
+          class="pop-menu"
+          onclick="closeNav()"
+          >Profile</a
+        >
+        <a
+          href="{% url 'story_one:schedule' %}"
+          class="pop-menu"
+          onclick="closeNav()"
+          >Schedule</a
+        >
+        <a
+        href="{% url 'story_one:events' %}"
+        class="pop-menu"
+        onclick="closeNav()"
+        >Events</a
+        >
+        <a
+          href="{% url 'story_one:gallery' %}"
+          class="pop-menu"
+          onclick="closeNav()"
+          >Gallery</a
+        >
+        <a
+        href="{% url 'story_one:books' %}"
+        class="pop-menu"
+        onclick="closeNav()"
+        >Books</a
+      >
+      </div>
+    </div>
+    <div class="navbar">
+      <div class="left">
+        <div class="logo">
+          <a href="{% url 'story_one:profile' %}">DS</a>
+        </div>
+      </div>
+      <div class="right">
+        <div class="right-nav">
+          <a class="profile" href="{% url 'story_one:profile' %}">Profile</a>
+        </div>
+        <div class="right-nav">
+          <a class="others" href="{% url 'story_one:schedule' %}">Schedule</a>
+        </div>
+        <div class="right-nav">
+          <a class="others" href="{% url 'story_one:events' %}">Events</a>
+        </div>
+        <div class="right-nav">
+          <a class="gallery" href="{% url 'story_one:gallery' %}">Gallery</a>
+        </div>
+        <div class="right-nav">
+          <a class="gallery" href="{% url 'story_one:books' %}">Books</a>
+        </div>
+        <div class="burger" onclick="openNav()">
+          <img
+            src="{% static 'images/1200px-Hamburger_icon.svg.webp'%}"
+            width="35px"
+            height="35px"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="main">{% block content %}{% endblock content %}</div>
+    </div>
+    {% block script %}{% endblock %}
+    <footer>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://id.linkedin.com/in/dionisius-baskoro-samudra-678ab7193"
+      >
+        <img
+          class="contact"
+          src="{% static 'images/PinClipart.com_zig-zag-clipart_1003028.png'%}"
+        />
+      </a>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.instagram.com/dionisiusamudra/"
+      >
+        <img class="contact" src="{% static 'images/pngguru.com.png'%}" />
+      </a>
+      <a href="#">
+        <div class="logo2">DS</div>
+      </a>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://steamcommunity.com/profiles/76561198255063738/"
+      >
+        <img class="contact" src="{% static 'images/steam-logo-white.png'%}" />
+      </a>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://twitter.com/maritubir_?s=09"
+        class="contact"
+      >
+        <img
+          class="contact"
+          src="{% static 'images/Twitter_Logo_White_On_Image_Cropped.png'%}"
+          width="2rem"
+          height="2rem"
+        />
+      </a>
+    </footer>
+
+  </body>
+</html>

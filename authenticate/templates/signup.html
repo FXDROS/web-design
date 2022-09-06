@@ -1,0 +1,105 @@
+{% extends 'base.html' %} {% load static %} {% block meta %}
+<style>
+    .form-group {
+  margin-bottom: 38px;
+}
+
+.sect-title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 37.5px;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+.form,
+.sect-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submission {
+    display: flex;
+    justify-content: center;
+}
+
+#id_username,
+#id_password1,
+#id_password2 {
+  width: 410px;
+  height: 54px;
+  font-weight: 400;
+  text-align: left;
+  font-size: 23px;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+button {
+  width: 200px;
+  height: 47px;
+  background-color: #000;
+  border-radius: 15.4315px;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  margin: 0 !important;
+}
+
+#submit-button {
+    margin: 0 !important;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 1px black solid;
+  color: #000;
+}
+
+.toSign {
+    margin-top: 5rem;
+}
+</style>
+{% endblock %} {% block title %} dionisiusamudra | signup {% endblock %} {% block content %}
+<div class="page-title">
+    <div class="text">SignUp</div>
+    <div class="mini-text">サインアップ</div>
+</div>
+<div style="display: flex; justify-content: center; width: 100%; height: 60vh; align-items: center;">
+
+
+    <div class='form'>
+        <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="form-group">
+                <div class="insert">
+                    <div class="fieldWrapper">
+                        {{ field.errors }}
+                        {{ field }}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <button type="submit" id="submit-button">Sign up</button>
+        </form>
+    </div>
+</div>
+<div class="description">
+    <ul>
+        <li>Baris pertama adalah Username</li>
+        <li>Baris kedua adalah Password</li>
+        <li>Baris ketiga adalah Retype Password</li>
+    </ul>
+</div>
+{% endblock %}
+
+

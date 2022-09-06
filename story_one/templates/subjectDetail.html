@@ -1,0 +1,37 @@
+{% extends 'base.html' %} {% load static %} {% block meta %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/subjectDetail.css' %}"
+/>
+{% endblock %} {% block title %}
+dionisiusamudra | schedule detail {% endblock %}
+<!-- -->
+{% block content %}
+<div class="detail-container">
+  <div class="detail-title">{{ subDesc.subject }}</div>
+
+  <table>
+    <tr>
+      <td class="left-table">Lecturer :</td>
+      <td class="right-table">{{subDesc.lecturer}}</td>
+    </tr>
+    <tr>
+      <td class="left-table">Room :</td>
+      <td class="right-table">{{subDesc.room}}</td>
+    </tr>
+    <tr>
+      <td class="left-table">Credits :</td>
+      <td class="right-table">{{subDesc.credit}}</td>
+    </tr>
+    <tr>
+      <td class="left-table">Terms :</td>
+      <td class="right-table">{{subDesc.term}}</td>
+    </tr>
+    <tr>
+      <td class="left-table">Description :</td>
+      <td class="right-table">{{subDesc.description}}</td>
+    </tr>
+  </table>
+</div>
+{% endblock %}

@@ -1,0 +1,276 @@
+.profile-header {
+  margin: 5rem 0 5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-pict {
+  min-width: 175px;
+  min-height: 175px;
+  background: url("../images/MX22-cropped.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  box-shadow: 0px 5px 15px 0px #757575;
+}
+
+.profile-name {
+  margin-left: 4rem;
+  width: fit-content;
+}
+
+.name {
+  font-size: 3.5rem;
+  font-weight: 600;
+  /* width: fit-content; */
+}
+
+.batch {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  /* width: fit-content; */
+}
+
+.desc {
+  width: 100%;
+  /* max-width: 1080px; */
+  text-align: justify;
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+}
+.card-event,
+.card-edu,
+.card-faq {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 5px 10px 2px #bdbdbd;
+}
+
+.FAQ {
+  margin-bottom: 5rem;
+}
+
+.card {
+  margin: 2.75rem;
+}
+
+.up,
+.down {
+  margin-left: 0.5rem;
+}
+
+.up:hover,
+.down:hover {
+  cursor: pointer;
+}
+
+.faq-padding {
+  padding: 1rem 2.75rem 1rem 2.75rem;
+}
+
+.wrapper .accordion_wrap:last-child .up-down-button a.down,
+.wrapper .accordion_wrap:first-child .up-down-button a.up {
+  opacity: 0.3;
+}
+
+.accordion_body {
+  display: none;
+  border-top: #757575 solid 1px;
+  background-color: #6e6d6d;
+  color: whitesmoke;
+  line-height: 1.75rem;
+}
+
+.acc-padding {
+  padding: 0.5rem 2.75rem 0.5rem 2.75rem;
+}
+
+.active {
+  display: block !important;
+}
+
+.wrapper
+  .accordion_wrap:last-child
+  .accordion_header
+  .up-down-button
+  a.down:hover,
+.wrapper
+  .accordion_wrap:first-child
+  .accordion_header
+  .up-down-button
+  a.up:hover {
+  cursor: default;
+}
+
+.accordion_header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.accordion_wrap {
+  border-top: #b9b9b9 solid 2px;
+}
+
+.up-down-button {
+  display: flex;
+  align-items: center;
+}
+
+.image-up,
+.image-down {
+  width: 2rem;
+}
+
+.image-down {
+  transform: rotate(180deg);
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem 0 5rem 0;
+}
+
+.card-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.year {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.activities {
+  border-left: solid black 6px;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.act-cont {
+  padding: 1rem;
+}
+
+.act-title {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.card-edu {
+  margin-right: 1.5rem;
+}
+
+.card-event {
+  margin-left: 1.5rem;
+}
+
+/* @keyframes moving {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+
+@media (max-width: 1224px) {
+  .profile-header,
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-name {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+
+  .name,
+  .batch {
+    text-align: center;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .batch {
+    font-size: 1.2rem;
+  }
+
+  .desc {
+    font-size: 0.9rem;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .year {
+    font-size: 1.25rem;
+  }
+
+  .act-title {
+    font-size: 1.1rem;
+  }
+
+  .act-desc {
+    font-size: 0.75rem;
+  }
+
+  .card-event {
+    margin: 1.5rem 0 0;
+  }
+  .card-edu {
+    margin: 0 0 1.5rem 0;
+  }
+}
+
+@media (max-width: 770px) {
+  .card {
+    margin: 2rem;
+  }
+
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .batch {
+    font-size: 1rem;
+  }
+
+  .faq-padding {
+    padding: 1rem 1.25rem 1rem 1.25rem;
+  }
+
+  .image-up,
+  .image-down {
+    width: 1.25rem;
+  }
+
+  .accordion_wrap .act-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .right-nav {
+    display: none;
+  }
+
+  .pop-nav .right-nav {
+    display: block;
+  }
+
+  .burger {
+    display: block;
+  }
+}

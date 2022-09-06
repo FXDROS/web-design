@@ -1,0 +1,56 @@
+{% extends 'base.html' %} {% load static %} {% block meta %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/schedule1.css' %}"
+/>
+{% endblock %} {% block title %} dionisiusamudra | schedule {% endblock %}
+<!-- -->
+{% block content %}
+<div class="page-title">
+  <div class="text">Schedules</div>
+  <div class="mini-text">スケジュール</div>
+</div>
+<div style="display: flex; justify-content: center; width: 100%;">
+<div class="schedContainer">
+  {% if schedules %}
+  <!---->
+  {% for schedule in schedules %}
+  <div class="mainCard">
+    <div class="innerCard">
+      <div>
+        <div class="card-title">{{ schedule.subject }}</div>
+        <div class="card-detail">{{ schedule.lecturer }}</div>
+        <div class="card-detail">{{ schedule.room }}</div>
+        <div class="card-detail">{{ schedule.credit }}</div>
+        <div class="card-detail">{{ schedule.term }}</div>
+      </div>
+      <div class="button" style="display: flex">
+        <div
+          class="detail"
+          style="width: 100%; display: flex; justify-content: center"
+        >
+          <a  style="width: 100%; text-align: center;" href="{{schedule.id}}/detail" role="button"> Detail </a>
+        </div>
+        <div
+          class="erase"
+          style="width: 100%; display: flex; justify-content: center"
+        >
+          <a style="width: 100%; text-align: center;" href="{{schedule.id}}/" role="button"> Erase </a>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+  {% endfor %} {% endif %}
+  <div class="mainCard">
+    <div class="innerCard">
+      <form class="addSchedule" action="/schedule/" method="POST">
+        {% csrf_token %} {{ form.as_table }}
+        <input type="submit" value="ADD" />
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}

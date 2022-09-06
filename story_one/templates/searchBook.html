@@ -1,0 +1,48 @@
+{% extends 'base.html' %} {% load static %} {% block meta %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/searchBook.css' %}"
+/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+{% endblock %} {% block title %} dionisiusamudra | schedule {% endblock %}
+<!-- -->
+{% block content %}
+<div class="page-title">
+  <div class="text">Book Search</div>
+  <div class="mini-text">本の検索</div>
+</div>
+<div class="search-box">
+    <input id="book-keyword" placeholder="search"/>
+    <table id="book-table">
+    </table>
+</div>
+
+
+
+
+{% endblock %}
+{% block script %}
+<script type="text/javascript">
+    $("#book-keyword").keyup(function(){
+        var usr_input = $("#book-keyword").val();
+        $.ajax({
+            url: "/data?q=" + usr_input,
+            success: function(data) {
+                var books_array = data.items;
+                $("#book-table").empty();
+                if(usr_input != ""){
+                $("#book-table").append("<tr><th> No. </th><th> Cover </th><th> Title </th><th> Author </th><th> Year </th></tr>");
+                }
+                for (i = 0; i < books_array.length; i++){
+                    var title = books_array[i].volumeInfo.title;
+                    var images = books_array[i].volumeInfo.imageLinks.thumbnail;
+                    var author = books_array[i].volumeInfo.authors;
+                    var year = books_array[i].volumeInfo.publishedDate;
+                    $("#book-table").append("<tr><th>" + i+1 + ".</th><td><img src=" + images + "/></td><td>" + title + "</td><td>" + author + "</td><td>" + year + "</td></tr>");
+                }
+            }
+        });
+    })
+</script>
+{% endblock %}

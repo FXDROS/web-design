@@ -1,0 +1,118 @@
+a {
+  text-decoration: none;
+  font-weight: 500;
+  margin: 5px 1px 5px 1px;
+}
+
+.detail {
+  border: solid #0052cc 2px;
+  border-radius: 20px;
+  margin-right: 0.75rem;
+}
+
+.detail:hover {
+  cursor: pointer;
+  background-color: #0052cc;
+}
+
+.detail:hover > a {
+  color: white;
+}
+
+.detail > a {
+  color: #0052cc;
+}
+
+.erase {
+  border: solid #ff3333 2px;
+  border-radius: 20px;
+  margin-right: 0.75rem;
+}
+
+.erase:hover {
+  cursor: pointer;
+  background-color: #ff3333;
+}
+
+.erase:hover > a {
+  color: white;
+}
+
+.erase > a {
+  color: #ff3333;
+}
+
+/* .detail,
+.erase {
+  border-radius: 20px;
+  border-width: 2px;
+  border-color: #1a75ff;
+} */
+
+.schedContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5rem 0 12.5rem 0;
+}
+
+.mainCard {
+  /* width: 17.25rem; */
+  margin: 0.75rem;
+  width: 17.25rem;
+  height: auto;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 5px 10px 2px #bdbdbd;
+}
+
+.innerCard {
+  margin: 0.75rem 1rem 1.75rem 1rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.addSchedule {
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-detail {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-description {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+}
+
+.detail,
+.erase {
+  width: 30%;
+}
+
+@media (max-width: 680px) {
+  .schedContainer {
+    justify-content: center;
+  }
+  .mainCard {
+    width: 100%;
+  }
+}

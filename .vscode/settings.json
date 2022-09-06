@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "D:\\story-ppw\\Scripts\\python.exe",
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black"
+}
